@@ -1,0 +1,31 @@
+<?xml version = "1.0"?>
+<!-- catalog.xs -->
+<xs:schema  
+    xmlns:xs =  "http://www.w3.org/2001/XMLSchema"
+    targetNamespace = "http://162.105.146.180:8038/week8"
+    xmlns = "http://162.105.146.180:8038/week8"
+    elementFormDefault = "qualified">
+    <xs:element name = "cookbook">
+       <xs:complexType>
+          <xs:sequence>
+               <xs:element name="recipe" maxOccurs="unbounded">
+                   <xs:complexType>
+                      <xs:sequence>
+                         <xs:element name = "name" maxOccurs="unbounded"/>
+                         <xs:element name = "ingredient" maxOccurs="unbounded"/>
+                           <xs:complexType>
+                               <xs:sequence>
+                                  <xs:element name = "name"   maxOccurs="unbounded"/>
+                                  <xs:element name = "amount"  maxOccurs="unbounded"/>
+                                  <xs:element name = "unit"     maxOccurs="unbounded"/>
+                               </xs:sequence>
+                            </xs:complexType>
+                         <xs:element name = "preparation"/>
+                         <xs:element name = "cooking"  />
+                      </xs:sequence>
+                   </xs:complexType>
+               </xs:element>
+          </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+</xs:schema>

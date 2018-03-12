@@ -1,0 +1,38 @@
+<!-- Created: 10/26/03 12:01:45 by Julia -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html>
+
+<head>
+
+    <script language="javascript">
+        function myAlert2(aString) {
+            //this function takes parameter
+            // it also returns a value
+            window.alert("Alerting: " + aString);
+            return 34;
+        }
+
+        function newFunc(a, b) {
+            if (a != b) {
+                return (a + "!=" + b);
+            }
+        }
+    </script>
+
+    <title>Using Functions</title>
+</head>
+
+<body>
+
+    <script language="javascript">
+        //<!--
+        result = myAlert2("everyone");
+        document.write("The return value was:<b> " + result + " " + result + "</b>");
+
+        document.write("<br>The new function return value was: <b> " + newFunc('dog', 'cat') + "</b>");
+        //-->
+    </script>
+
+</body>
+
+</html>

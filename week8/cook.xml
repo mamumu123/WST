@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cook.xsl"?>
+<cookbook>
+<!-- 样例一 -->
+  <recipe>
+    <name>Rhubarb and Custard</name>
+    <ingredient>
+      <name>Milk</name>
+      <amount>15</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>700</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Custard Powder</name>
+      <amount>8</amount>
+      <unit>tbs</unit>
+    </ingredient>
+    <preparation>Mix together and put in oven proof dish</preparation>
+    <cooking>Heat in a moderate oven for 40 mins</cooking>
+  </recipe>
+<!-- 样例二 -->
+   <recipe>
+    <name>Beef noodles</name>
+    <ingredient>
+      <name>Beef</name>
+      <amount>100</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>noodles</name>
+      <amount>500</amount>
+      <unit>g</unit>
+    </ingredient>
+    <preparation>Cook the noodles and meat first</preparation>
+    <cooking>Mix together </cooking>
+  </recipe>
+  <!-- 样例三 -->
+   <recipe>
+    <name>Braised Spare Ribs in Brown Sauce</name>
+    <ingredient>
+      <name>pork spare ribs</name>
+      <amount>300</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>carrots</name>
+      <amount>500</amount>
+      <unit>g</unit>
+    </ingredient>
+    <preparation>Combine the pork ribs with the marinade sauce (1), set about 10 mimutes.</preparation>
+    <cooking>Add the carrots and peppers,stir a few times, cover then cook until the meat is tender and the sauce starts to thickene slightly, ( add 1 tsp. Chinese aromatic vinegar for better smell and taste), now it is ready to serve. Enjoy! </cooking>
+  </recipe>
+  <!-- 样例四 -->
+  <recipe>
+    <name>Sweet and sour pork chops</name>
+    <ingredient>
+      <name>fresh pork chop</name>
+      <amount>300</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>carrotsChinese vinegar</name>
+      <amount>500</amount>
+      <unit>g</unit>
+    </ingredient>
+    <preparation>fresh and chopped pork-chop</preparation>
+    <cooking>deep-fry for a few minutes </cooking>
+  </recipe>
+
+</cookbook>
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业二</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="z2.css">
+</head>
+
+<body>
+    <div id="z2_container">
+
+        <div class="head">
+            <h1>“天阶”志愿活动，欢迎加入</h1>
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h4>这里会有一些关于此次活动的介绍:</h4>
+                <hr>
+                <p>这一项活动是北京大学光华管理学院青年志愿者协会与天阶社区共同举办。 这一活动吸引了北大各个院系的志愿者、来自天阶社区的几十个家庭报名参加。
+                </p>
+                <a href="http://blog.sina.com.cn/s/blog_7c1f22670102w5sn.html"> <img src="img/z2_2.jpg" alt="img/z2_2.jpg"> </a><br>
+                <small>点击图片可访问更多信息</small>
+                <p> 在上午，大家先在北京大学图书馆门口合影留念，志愿者会向孩子们介绍了北大图书馆的概况，随后大家兵分四路，开始一天的北大之旅。下午，志愿者们会组织大家进行一些有趣的互动小游戏。比如“五毛一块”“松鼠大树”“两人三足”“丢手绢”等等。</p>
+                <p>如果你拥有这些特点，欢迎填写右面的表格来报名</p>
+                <ol>
+                    <li>喜欢孩子</li>
+                    <li>喜欢分享</li>
+                    <li>喜欢公益</li>
+                </ol>
+            </div>
+            <div class="right">
+                <div>
+                    <!--table-->
+                    <table border=1px>
+                        <form action="post.php" target="_blank" method="POST">
+                            <caption><b>欢迎加入“天阶”志愿活动<b></caption>
+                                    <tr>
+                                        <td rowspan="4">基本信息</td>
+                                        <td>姓名</td>
+                                        <td><input type="text" name="nane" value="" placeholder="请输入您的姓名" required="required" autofocus="autofocus"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>性别</td>
+                                        <td>
+                                            男<input type="radio" name="sex" value="female" required>
+                                            女<input type="radio" name="sex" value="male" required>
+                                        </td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>联系方式</td>
+                                        <td><input type="number" name="phone"placeholder="请输入联系方式" required="required" autofocus="autofocus"/></td>
+                                    </tr>
+                                 <tr>
+                                        <td>邮箱</td>
+                                        <td><input type="email" name="email" placeholder="请输入您的常用邮箱" required="required" autofocus="autofocus"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">能力信息</td>
+                                       <td>你会这些东西吗</td>
+                                        <td>
+                                             摄影<input type="checkbox" name="power" valve="摄影" >
+                                             介绍<input type="checkbox" name="power"valve="介绍" >
+                                             组织<input type="checkbox" name="power"valve="组织" >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>你曾经参加过我们组织过的活动吗</td>
+                                        <td><select required>
+                                            <option value="民工子弟进北大">民工子弟进北大</option>
+                                            <option value="民工子弟进清华">民工子弟进清华</option>
+                                            <option value="上面两者都参加过">上面两者都参加过</option>
+                                            <option value="上面两者都没有参加过">上面两者都没有参加过</option>
+                                             </select>
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td>你还有什么特长吗</td>
+                                        <td><textarea rows="3" width="100%"placeholder="说说你的特长吧" required="required" autofocus="autofocus"/></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">活动参与信息</td>
+                                        <td>活动时间选择<br>
+                                        (早上八点开始，下午两点开始)
+                                        </td>
+                                        <td>
+                                            <select multiple="multiple" size="4" required>
+                                                 
+                                                     <option value="周六上午"  name="time">周六上午</option> 
+                                                     <option value="周六下午"  name="time">周六下午</option>
+                                                     <option value="周日上午"  name="time">周日上午</option>
+                                                     <option value="周日下午"  name="time">周日下午</option>
+                                                           
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>服装大小</td>
+                                        <td>
+                                            <select required>
+                                            <optgroup>
+                                                <option value="小号" >X</option>
+                                                <option value="中号">XX</option>
+                                                <option value="大号">XXX</option>
+                                            </optgroup>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>服装颜色<br>我们会尽量满足</td>
+                                        <td><input type="color" name="color" value="color" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>你准备好了吗？</td>
+                                        <td  colspan=2>
+                                            <input type="submit" name="yes" value="准备好了" >
+                                             <input type="reset" name="no" value="清空">
+                                      </td>
+                                    </tr>
+                                 </form>
+                    </table>
+                    <div id="return">
+                        <a href="index.html"> <img src="img/p.png" alt="img/p.png"> </a><br>
+                        点击图片返回首页
+                    </div>
+                </div>  
+            </div>
+        </div> 
+        <div class="footer">
+          <a href="#">回到顶部</a> <a href="index.html">主页</a>
+        
+        </div>
+    </div>
+</body>
+
+</html>

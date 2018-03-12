@@ -1,0 +1,12 @@
+#z1_container {
+    width: 80%;
+    background-color: whitesmoke;
+    padding: 10px 30px;
+    border-radius: 10px;
+    overflow: hidden；
+}
+
+body,
+div {
+    margin: 0 auto;
+}

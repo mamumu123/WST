@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <meta http-equiv="content-Language" content="en-us">
+    <script language="javascript">
+        var word1 = "my word"; // a global variable
+
+        function checkSubmit() { // 返回为true时上传表单
+            window.alert("Checking submit ..." + document.quiz.watch[0].checked);
+            var q = document.quiz;
+            var qc = q.chat;
+
+            if (noValue(q.personal_Firstname.value)) {
+                qc.value += "Why no name? - I shall call you Unknown\n";
+                q.personal_Firstname.value = "Unknown";
+            }
+
+            if (!checkAge(q.personal_Age.value)) {
+                qc.value += "Please input your age again, which should be a number between 5 to 150.\n";
+                return false;
+            }
+
+            if (!checkText(q, qc)) {
+                qc.value += "No value: " + q.elements[i].name + "\n";
+                return false;
+            }
+            return true;
+        }
+
+        function checkAge(age) { // Check age is number only and between 5-150
+            if (age.search(/^\d/) == -1) {
+                window.alert("Age should be a number!");
+                return false;
+            }
+            var ageNum = parseInt(age);
+            if (ageNum < 5 || ageNum > 150) {
+                window.alert("Age should be between 5 to 150!");
+                return false;
+            }
+            return true;
+        }
+
+        function noValue(val) { //不是字母、数字或下划线
+            // javascript uses the regular expressions from perl
+            // Sebesta 4.12.1
+            if (val.search(/\w/) == -1) {
+                return true;
+            }
+            return false;
+        } //noValue
+
+        function checkText(q, qc) {
+            //Warn if text boxes are empty (any alphanumeric is OK)
+            //qc.value += "checkText\n";
+            for (var i = 0; i < q.length; i++) {
+                if (noValue(q.elements[i].value)) {
+                    qc.value += "No value: " + q.elements[i].name + "\n";
+                    alert("please fill right ");
+                    return false;
+                }
+            }
+            return true;
+        } // checkText
+    </script>
+    <title>Form 2 Wizard</title>
+</head>
+
+<body>
+    <h1>Form 2 Wizard</h1>
+    <hr>
+    <h2>A dummy form created with MS Frontpage</h2>
+    <p>(Handlers added by hand)</p>
+
+    <form action="../../cgi-bin/week6/dump.pl" onSubmit="return checkSubmit();" method="post" name="quiz">
+        <ol>
+            <li>
+                <p>please identify and describe yourself:</p>
+                <table>
+                    <tr>
+                        <td align="right"><em>First name</em></td>
+                        <td><input type="text" name="personal_Firstname" SIZE=25 required></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><em>Last name</em></td>
+                        <td><input type="text" name="personal_Lastname" SIZE=25 required></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><em>Age</em></td>
+                        <td><input type="text" name="personal_Age" SIZE=3 MAXLENGTH=3></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><em>Sex</em></td>
+                        <td><input type="radio" name="personal_Sex" value="Male" CHECKED>Male
+                            <input type="radio" name="personal_Sex" value="Female">Female</td>
+                    </tr>
+                    <tr>
+                        <td align="right"><em>ID Number</em></td>
+                        <td><input type="text" name="personal_IDNumber" SIZE=16 MAXLENGTH=16 required></td>
+                    </tr>
+                </table>
+            </li>
+
+            <li>
+                <p>Choose one of the following options:</p>
+                <p><input type="radio" name="watch" value="Dunno" CHECKED> I don't know?!
+                    <br><input type="radio" name="watch" value="radio"> radio
+                    <br><input type="radio" name="watch" value="TV"> TV
+                    <br><input type="radio" name="watch" value="Film"> Film
+                    <br><br>
+                </p>
+            </li>
+
+            <li>
+                <p>Choose one of the following options:</p>
+                <p><select name="holiday">
+            <option value="Greece" SELECTED>Greece <option value="Italy">Italy
+            <option value="France">France <option value="Spain">Spain
+          </select>
+                    <br>
+                </p>
+            </li>
+
+            <li>
+                <p>How would you rate your knowledge of JavaScript?</p>
+                <p>
+                    <input type="radio" name="knowledge" value="1" onClick="alert('Time for some SERIOUS learning');">1
+                    <input type="radio" name="knowledge" value="2" onClick="alert('I hope you\'re yearning for some learning');">2
+                    <input type="radio" name="knowledge" value="3" CHECKED>3
+                    <input type="radio" name="knowledge" value="4">4
+                    <input type="radio" name="knowledge" value="5">5
+                    <br>
+                </p>
+            </li>
+
+        </ol>
+
+        <p />
+        <!-- The text box -->
+        <textarea name="chat" rows=5 cols=40></textarea>
+        <p />
+        <input type="button" value="Don't push Me" name="push" onClick="alert('HOW RUDE!!!!\nI asked you NOT to push me');">
+        <input type="submit" value="Submit form">
+        <input type="reset" value="Reset form" onClick="return confirm('Are you sure?');">
+
+    </form>
+
+    <hr>
+    <div>
+        <a href="../index.html">home</a>
+    </div>
+</body>
+
+</html>

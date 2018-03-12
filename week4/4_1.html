@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业4</title>
+
+    <link rel="stylesheet" href="4_1.css">
+</head>
+<!--作业内容-->
+
+<body>
+    <div>
+        <h1>作业四</h1>
+    </div>
+    <div id="z1_container">
+        <div>
+
+            <p>1、Give the SELECT command to answer the question Who will go to the party held in Peking University?</p>
+            <pre>
+            MySQL query:
+            SELECT guest.Guest_Name 
+            from guest, party, guest_party 
+            WHERE guest.Guest_ID=guest_party.Guest_ID 
+            AND guest_party.Party_Num=party.Party_Num 
+            AND party.Place='Peking University'
+
+        </pre>
+            <p> 2、Figure out a way to obtain the column labels returned by mysql_fetch_array.</p>
+            <pre>
+            $result = mysql_query($query);
+            $array=$result->fetch_assoc();
+            $column_names=array_keys($array);
+        </pre>
+            <p>3、 Tell the difference between a CGI program and a PHP program executed by a Web Server.</p>
+            <p>答：CGI代表一个接口，这意味着不管你选择哪种语言，如果它符合标准，你就可以实现CGI中提到的所有功能。 PHP程序是用PHP编写的程序，可以执行以达到某种目的。PHP也可以用于CGI程序。 CGI是外部应用程序与Web服务器之间的接口标准，不同类型语言写的程序只要符合cgi标准，就能作为一个cgi程序与web服务器交互，早期的cgi大多都是c或c++。php可以作为一个cgi使用，作为cgi时，它将作为独立的进程运行，有请求过来就创建一个进程进行响应。当php作为apache的一个模块时，php将作为apache的一个子进程存在，接受apache调用。
+            </p>
+        </div>
+
+</body>
+
+</html>

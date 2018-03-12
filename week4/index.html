@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>调查</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        <h2> Welcome to the Consumer Electronics Purchasing Survey </h2>
+        <hr>
+
+        <h4> Your name </h4>
+        <p>
+            <input type="text" name="name" required="required" />
+        </p>
+        <h4> Your Age Category: </h4>
+        <p>
+            <input type="number" name="age" placeholder="请输入年龄" required="required" autofocus="autofocus" />
+        </p>
+        <h4> Your Gender: </h4>
+        <p>
+            <input type="radio" name="gender" value="female" checked="checked" /> Female <br />
+            <input type="radio" name="gender" value="male" /> Male <br /> <br />
+        </p>
+        <h4> Your Email </h4>
+        <p>
+            <input type="email" name="email" placeholder="请输入您的常用邮箱" required="required" autofocus="autofocus" />
+        </p>
+
+        <p>
+            <input type="submit" value="Submit Order" />
+            <input type="reset" value="Clear Order Form" />
+        </p>
+    </form>
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <script language="javascript">
+        function getURL() {
+            var url = prompt("Enter a URL:", "j1.html");
+            gotoURL(url);
+        }
+
+        function gotoURL(url) {
+            window.location = url;
+        }
+    </script>
+
+    <title>Popups</title>
+
+</head>
+
+
+<body onLoad="wakeywakey()">
+    <h2>Get a URL from the user using a popup then redirect page using location</h2>
+    <button type="button" onclick="getURL();">ckick</button>
+
+    <hr>
+    <span>Fix the broken status bar</span>
+    <a href="#" onMouseOver="self.status='Off to the Lemon'; return ture;" onMouseOut="self.status='';">the Lemon</a>?
+    <br />or would you prefer the
+    <a href="#" onMouseOver="self.status='Ah.... I see that you prefer the lime'; return true;" onMouseOut="self.status='';">the Lime</a>
+</body>
+
+</html>

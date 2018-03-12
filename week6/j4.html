@@ -1,0 +1,65 @@
+<!-- Created: 10/26/03 12:01:45 by Julia -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html>
+
+<head>
+
+    <script language="javascript">
+        // <!--
+        // Objects
+
+        var tourOperator = "Ten Bellies Tours"; // a global variable
+        var holList = [];
+
+        // An object IS a function
+        function Holiday(destination, duration, cost) {
+            this.destination = destination; //"this" used in same sense as Java
+            this.duration = duration;
+            this.cost = cost;
+            this.agent = tourOperator;
+        }
+
+        function makeHoliday(dest, dur, cost) {
+            hol = new Holiday(dest, dur, cost);
+            holList.push(hol); // can't use "push" on older browsers
+        }
+
+        function outputObject(anObject) {
+            for (f in anObject) {
+                document.write(f + " = " + anObject[f] + "<br />");
+            }
+            document.write("<br>");
+        }
+
+        function showHolidays() {
+            for (var i = 0; i < holList.length; i++) {
+                outputObject(holList[i]);
+            }
+        }
+
+        // -->
+    </script>
+
+    <title>JavaScript Objects</title>
+</head>
+
+
+<body>
+
+    <script language="javascript">
+        //<!--
+        document.write("<h2>Objects</h2>");
+        document.write("<b>Hi there</b><br />");
+        makeHoliday("Toronto", "2 Weeks", "$400");
+        makeHoliday("Beijing", "3 Weeks", "$500");
+        makeHoliday("Shanghai", "4 Weeks", "$600");
+        makeHoliday("Mexico", "1 Weeks", "$4000");
+        showHolidays();
+
+        //-->
+    </script>
+
+
+</body>
+
+</html>

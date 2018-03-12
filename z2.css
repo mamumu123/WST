@@ -1,0 +1,68 @@
+#z2_container {
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    overflow: hidden；
+}
+
+.head,
+.main {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.main {
+    height: 600px;
+}
+
+.left {
+    width: 40%;
+    height: 600px;
+    background: #ccc;
+    float: left;
+    padding: 20px;
+}
+
+.right {
+    width: 40%;
+    height: 600px;
+    background: #FCC;
+    float: left;
+    padding: 20px;
+}
+
+img {
+    height: 150px;
+    width: 50%;
+}
+
+.footer {
+    height: 30px;
+    background: grey;
+    clear: both;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #111;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    width: 100%;
+}
+
+tr {
+    text-align: center;
+    font-size: 10px;
+}
+
+#area {
+    margin: 0 auto;
+}
+
+#return {
+    width: 50%;
+    height: 50%;
+}
